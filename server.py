@@ -1,8 +1,5 @@
-from os import name
 from flask import Flask, request,jsonify,render_template
 from plugin import sakura
-from dotenv import load_dotenv
-load_dotenv()
 app = Flask(__name__)
 
 @app.route('/sakura/api/card/array',methods=['GET'])
