@@ -1,7 +1,8 @@
 from flask import Flask, request,jsonify,render_template
+from flask_cors import CORS
 from plugin import sakura
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/sakura/api/card/array',methods=['GET'])
 def get_list_card():
     if request.method=='GET':
